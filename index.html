@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trash Tracker</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#10b981">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Trash Tracker">
+    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiVHJhc2ggVHJhY2tlciIsInNob3J0X25hbWUiOiJUcmFzaEFwcCIsInN0YXJ0X3VybCI6Ii8iLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsImJhY2tncm91bmRfY29sb3IiOiIjZmZmZmZmIiwidGhlbWVfY29sb3IiOiIjMTBiOTgxIiwiaWNvbnMiOlt7InNyYyI6ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjNhV1IwYUQwaU1qUWlJR2hsYVdkb2REMGlNalFpSUhabGNuTnBiMjRqYWpvMkxqSTRJQ2gxYUdsd0tTNUZ0bHRGRFFvZ0lDQWdJRHhzYVc1bFlYSkhjbUZrYVdWdWRDQnBaRDBpWjNKaFpDSWdlREU5SWpBaUlIa3hQU0l6SWlCNE1qMGlNaklpSUhreFBTSXpJaTQ4TDJ4cGJtVmhja2R5WVdScFpXNTBQZzBLSUNBZ0lEeGtaV1p6UGcwS0lDQWdJQ0FnUEhOMGIzQWdiMlptYzJWMFBTSXpJU0lnYzNSdmNDMWpiMnh2Y2owaWNtZGlLREUyTERBeUxETXhLU0lnYzNSdmNDMXZjR0ZqYVhSNVBTSXVOeUlnTHo0TkNpQWdJQ0FnSUR4emRHOXdJRzltWm5ObGREMGlOekFsSWlCemRHOXdMV052Ykc5eVBTSnlaV1FvTWpVMUxEQXNNak15S1NJZ2MzUnZjQzF2Y0dGamFYUjVQU0l1T1NJZ0x6NE5DaUFnSUNBOEwyUmxabk04RFFvZ0lEeDBhWFJzWlQ0Z1ZISmhjMmdnVkhKaFkydGxjakE4TDNScGRHeGxQZzBLSUNBOGNHRjBhQ0JrUFNKTk9DQXhNa003TWpBZUJRMUhPaUIyTURsaGFTQXhMalExSWpkYU1TSXhPUzR5TnlCYUxTNDBOaUF5TGpNeUlERXhMak0ySURNdU5UUkVNUzQ0TnlBMUxqUTNJREE4TFdFeUlERXhMakEzSUMweE1TNHdOeUF6SUM0NU5DSXhNeTQ0TnlBM0xqZzFRU0l1T1RRZ0xqazBJREFnTURBaU16WXROall1TXk1Q1FXSXVPVFFnTGprMElEQWdNREE4TFRNMkxUWTJMak40V2pKREp6TURBQUJBOEVORWc4Vkl6VTZBZFYzT1NJTmt1bGRCbGdUSEh2ZGJadFZHamJQUHo5czRSZFVEOEVvQjhJTkZTTkZoUTVHNUlCd3hnY09ERW9BcjlTSWNLa2xQR1Z6Y3V6OE5mMzU3d0ljbE5Md1ZWTEJBZUJhL3VGaExxazNESkRjMVpaNklacGh4ekk5UnRNWTEvNzNkRTVrcWxBOUFCajNaTzRJcGV1TFdxdEhUaE03VUlJaTM5bWNVRUVnNVBjZzFGcmt1N0lEWTdnbE9HSzJ6NDQ5NEV4SVVmRHQ0QjlNQlYwUEQyRTFEQkJsSzZldVJ0SUJCa2lPcG5KTHZZbG1EbGdVQm9XWXR5cXVEa0tKaXVFTkxHaWZpRHBDaVNJNkFlVHZXUWJpUTVGU3M2clQzRjhNek5TdEoxdlpMS2NWek9KTWJHMU5QVXdZRzFOVkEzVDBjZHhpZzFaV0FmU0M1U1lQSGg2c00wWFVtRnRGV2o2L25NbTc0bEdlU0hqU05tOTJNbGNxUnVBN2h6ZWp5bHhGVjFRQmxqbGdrNkVzbExiQklMVnduWWhtK3lqUEM1bVQ2T1NTbFZvV3dKdEhGMi9jaXBhQmpKRFVGbkYvSXBJaVBBSUJJYWdvVU5BSzlaa24zeUQrc2lkM1pPQXF3bFZWRkRsNzJJSGJjVDBGZ2Zwc2szM1h1YVU1OXE5Mzc1dlpzQzZoaTI1OVpGRE1jdWcxbzVmUjVLTmNqbnNJV2Q4YW5vaGlnb2xLWlVmdXVRVzJzcnAvZGt6WGJqYVBLV0p2aDZnV1Y1Ry8zZz09IiwiaWNvbiI6WyJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUIzYVdSMGFEMGlNalJiUm14Y1pZUWhMUzl4bG1ZRXhsUEVTVjB1YTFjRUJ5RXVIRXRmQm9HNXo0UUVHNUdVR29HUXozREVXWGFHK2hPQm1zWjZUSE5vdG5Db28vQkdnckJCYzNOalRrNUl3SWx0VCtoLzBWZHNZa3B1V2Zva3FKWFE5dE9saEYxTEVENUtLejkvWkNsMWRJWEVNK3FDbFNnQU1UdmhXZVZGQnJyQUNHakNhUzAyWklWUzBsWlQwcUJaQUNBUTlKUjZHU0lSREhKRTFJcEFUR3NNTUZ5Z0NKRE02Z2RxL05TRU9JcTNCWmgzMVhGVVRmVzJRZXJsOWNBZWpPaytDZVBvVkMxd2YrdUI2WFdoK3VMTkZWaHJnKzlBQ0VZQk5LclNBa3FBbzlURk1Cc0VsWGJ1ZzNUaW1VbzNSZU9WZ0k0SGx5SVNlT0daVXBNQThUdTA4RDJlb2MzY2JhL0RSOE9jK0xySVFZdWdDazZOTktVQjY1cDBwTWRSa0MzOCIsInR5cGUiOiJpbWFnZS9zdmcreCIsInNpemVzIjoiMjRrMjQifV19">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    
+    <!-- Firebase SDK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.23.0/firebase-app-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.23.0/firebase-database-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.23.0/firebase-storage-compat.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .header h1 {
+            color: #2d3748;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Content Area */
+        .content {
+            padding-top: 70px;
+            padding-bottom: 80px;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .tab-content {
+            display: none;
+            height: calc(100vh - 150px);
+            padding: 1rem;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Home Tab */
+        .home-content {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: white;
+        }
+
+        .welcome-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 1rem 0;
+            color: #2d3748;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            color: #2d3748;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #10b981;
+        }
+
+        /* Map Tab */
+        .map-container {
+            height: 100%;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+
+        .map-controls {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .control-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            margin-bottom: 10px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .control-btn:hover {
+            background: #059669;
+            transform: scale(1.1);
+        }
+
+        /* Leaderboard Tab */
+        .leaderboard {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 0;
+            max-height: 100%;
+            overflow-y: auto;
+        }
+
+        .leaderboard-header {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .leaderboard-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .rank {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #10b981;
+            margin-right: 1rem;
+            min-width: 30px;
+        }
+
+        .user-info {
+            flex: 1;
+        }
+
+        .username {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .points {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        .score {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #10b981;
+        }
+
+        /* Alert Tab */
+        .alerts-container {
+            max-height: 100%;
+            overflow-y: auto;
+        }
+
+        .alert-item {
+            background: rgba(255, 255, 255, 0.9);
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 4px solid #f56565;
+            color: #2d3748;
+        }
+
+        .alert-item.warning {
+            border-left-color: #ed8936;
+        }
+
+        .alert-item.info {
+            border-left-color: #4299e1;
+        }
+
+        .alert-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .alert-time {
+            font-size: 0.8rem;
+            color: #718096;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-around;
+            padding: 0.5rem 0;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #718096;
+            text-decoration: none;
+            min-width: 60px;
+        }
+
+        .nav-item.active {
+            color: #10b981;
+            transform: translateY(-2px);
+        }
+
+        .nav-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .nav-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            max-width: 90vw;
+            max-height: 80vh;
+            overflow-y: auto;
+            width: 100%;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .modal-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #718096;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #2d3748;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #10b981;
+        }
+
+        .btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background: #059669;
+        }
+
+        .btn-secondary {
+            background: #718096;
+        }
+
+        .btn-secondary:hover {
+            background: #4a5568;
+        }
+
+        /* Popup styles */
+        .marker-popup {
+            max-width: 300px;
+        }
+
+        .popup-image {
+            width: 100%;
+            max-height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+
+        .popup-description {
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+
+        .popup-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .popup-btn.cleaning {
+            background: #ed8936;
+        }
+
+        .popup-btn:hover {
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.3rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Loading spinner */
+        .loading {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3000;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #10b981;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🗑️ Trash Tracker</h1>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content">
+            <!-- Home Tab -->
+            <div class="tab-content active" id="home">
+                <div class="home-content">
+                    <div class="welcome-card">
+                        <h2>Welcome to Trash Tracker!</h2>
+                        <p>Help keep our environment clean by reporting and cleaning trash spots in your area.</p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number" id="totalPoints">0</div>
+                            <div>Your Points</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="totalReports">0</div>
+                            <div>Trash Reported</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="totalCleaned">0</div>
+                            <div>Spots Cleaned</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="nearbyTrash">0</div>
+                            <div>Nearby Trash</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Tab -->
+            <div class="tab-content" id="map-tab">
+                <div class="map-container">
+                    <div id="map"></div>
+                    <div class="map-controls">
+                        <button class="control-btn" onclick="addTrashMarker()" title="Report Trash">
+                            📍
+                        </button>
+                        <button class="control-btn" onclick="getCurrentLocation()" title="My Location">
+                            🎯
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leaderboard Tab -->
+            <div class="tab-content" id="leaderboard">
+                <div class="leaderboard">
+                    <div class="leaderboard-header">
+                        <h2>🏆 Leaderboard</h2>
+                        <p>Top environmental heroes</p>
+                    </div>
+                    <div id="leaderboardList">
+                        <!-- Leaderboard items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alert Tab -->
+            <div class="tab-content" id="alerts">
+                <div class="alerts-container" id="alertsList">
+                    <!-- Alerts will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="#" class="nav-item active" onclick="switchTab('home', this)">
+                <div class="nav-icon">🏠</div>
+                <div class="nav-label">Home</div>
+            </a>
+            <a href="#" class="nav-item" onclick="switchTab('map-tab', this)">
+                <div class="nav-icon">🗺️</div>
+                <div class="nav-label">Map</div>
+            </a>
+            <a href="#" class="nav-item" onclick="switchTab('leaderboard', this)">
+                <div class="nav-icon">🏆</div>
+                <div class="nav-label">Leaderboard</div>
+            </a>
+            <a href="#" class="nav-item" onclick="switchTab('alerts', this)">
+                <div class="nav-icon">🚨</div>
+                <div class="nav-label">Alert</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Add Trash Modal -->
+    <div class="modal" id="addTrashModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Report Trash Spot</h3>
+                <button class="close-btn" onclick="closeModal('addTrashModal')">&times;</button>
+            </div>
+            <form id="trashForm">
+                <div class="form-group">
+                    <label class="form-label">Description (Optional)</label>
+                    <textarea class="form-input" id="trashDescription" rows="3" placeholder="Describe the trash situation..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Take a Photo</label>
+                    <input type="file" class="form-input" id="trashPhoto" accept="image/*" capture="camera">
+                </div>
+                <button type="submit" class="btn">Report Trash Spot</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cleaning Modal -->
+    <div class="modal" id="cleaningModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Upload Cleaning Photo</h3>
+                <button class="close-btn" onclick="closeModal('cleaningModal')">&times;</button>
+            </div>
+            <form id="cleaningForm">
+                <div class="form-group">
+                    <label class="form-label">Take a photo showing the cleaned area</label>
+                    <input type="file" class="form-input" id="cleaningPhoto" accept="image/*" capture="camera" required>
+                </div>
+                <button type="submit" class="btn">Complete Cleaning</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+
+    <script>
+        // Firebase Configuration (Replace with your config)
+        const firebaseConfig = {
+        apiKey: "AIzaSyBuFXAX2hyIL-7boEQFSa0RebPeqf4uIYc",
+        authDomain: "test-e6840.firebaseapp.com",
+        databaseURL: "https://test-e6840-default-rtdb.firebaseio.com",
+        projectId: "test-e6840",
+        storageBucket: "test-e6840.firebasestorage.app",
+        messagingSenderId: "524113818021",
+        appId: "1:524113818021:web:c36e9a1fc5c30cc381384c"
+        };
+
+        // Initialize Firebase (Using demo mode for this example)
+        let database, storage;
+        try {
+            firebase.initializeApp(firebaseConfig);
+            database = firebase.database();
+            storage = firebase.storage();
+        } catch (error) {
+            console.log("Firebase not configured, using local storage");
+        }
+
+        // Global variables
+        let map;
+        let userLocation;
+        let currentMarker;
+        let trashMarkers = [];
+        let userPoints = 0;
+        let userStats = {
+            totalReports: 0,
+            totalCleaned: 0,
+            totalPoints: 0
+        };
+
+        // Initialize the app
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMap();
+            requestLocationPermission();
+            loadTrashData();
+            updateStats();
+            checkNearbyTrash();
+            setInterval(checkNearbyTrash, 30000); // Check every 30 seconds
+        });
+
+        // Tab switching
+        function switchTab(tabId, element) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active class from all nav items
+            document.querySelectorAll('.nav-item').forEach(nav => {
+                nav.classList.remove('active');
+            });
+            
+            // Show selected tab and activate nav item
+            document.getElementById(tabId).classList.add('active');
+            element.classList.add('active');
+            
+            // Initialize map when map tab is selected
+            if (tabId === 'map-tab' && map) {
+                setTimeout(() => {
+                    map.invalidateSize();
+                }, 100);
+            }
+            
+            // Load leaderboard when leaderboard tab is selected
+            if (tabId === 'leaderboard') {
+                loadLeaderboard();
+            }
+        }
+
+        // Initialize Leaflet map
+        function initializeMap() {
+            map = L.map('map').setView([28.6139, 77.2090], 13); // Default to Delhi
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+            
+            map.on('click', function(e) {
+                if (confirm('Add trash marker at this location?')) {
+                    addTrashMarkerAt(e.latlng);
+                }
+            });
+        }
+
+        // Request location permission
+        function requestLocationPermission() {
+            if ('geolocation' in navigator) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        userLocation = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        };
+                        
+                        if (map) {
+                            map.setView([userLocation.lat, userLocation.lng], 15);
+                            
+                            // Add user location marker
+                            L.marker([userLocation.lat, userLocation.lng])
+                                .addTo(map)
+                                .bindPopup('Your Location')
+                                .openPopup();
+                        }
+                        
+                        checkNearbyTrash();
+                    },
+                    function(error) {
+                        console.error('Location permission denied:', error);
+                        addAlert('Location permission denied. Some features may not work properly.', 'warning');
+                    }
+                );
+            } else {
+                addAlert('Geolocation is not supported by this browser.', 'error');
+            }
+        }
+
+        // Get current location
+        function getCurrentLocation() {
+            if ('geolocation' in navigator) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        
+                        userLocation = { lat, lng };
+                        map.setView([lat, lng], 16);
+                        
+                        // Remove previous user marker
+                        if (currentMarker) {
+                            map.removeLayer(currentMarker);
+                        }
+                        
+                        // Add new user marker
+                        currentMarker = L.marker([lat, lng])
+                            .addTo(map)
+                            .bindPopup('Your Current Location')
+                            .openPopup();
+                    },
+                    function(error) {
+                        alert('Unable to get your location. Please check your settings.');
+                    }
+                );
+            }
+        }
+
+        // Add trash marker
+        function addTrashMarker() {
+            if (!userLocation) {
+                alert('Please allow location access first.');
+                requestLocationPermission();
+                return;
+            }
+            
+            addTrashMarkerAt(userLocation);
+        }
+
+        // Add trash marker at specific location
+        function addTrashMarkerAt(latlng) {
+            // Store temporary location for modal
+            window.tempTrashLocation = latlng;
+            openModal('addTrashModal');
+        }
+
+        // Handle trash form submission
+        document.getElementById('trashForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const description = document.getElementById('trashDescription').value;
+            const photoFile = document.getElementById('trashPhoto').files[0];
+            
+            if (!window.tempTrashLocation) {
+                alert('Location not available. Please try again.');
+                return;
+            }
+            
+            showLoading();
+            
+            if (photoFile) {
+                // Convert image to base64
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const base64Image = e.target.result;
+                    saveTrashMarker(window.tempTrashLocation, description, base64Image);
+                };
+                reader.readAsDataURL(photoFile);
+            } else {
+                saveTrashMarker(window.tempTrashLocation, description, null);
+            }
+        });
+
+        // Save trash marker to database
+        function saveTrashMarker(location, description, image) {
+            const trashData = {
+                lat: location.lat,
+                lng: location.lng,
+                description: description || 'No description provided',
+                image: image,
+                timestamp: Date.now(),
+                status: 'reported', // 'reported', 'cleaning', 'cleaned'
+                reportedBy: getUserId(),
+                cleanedBy: null,
+                cleanedImage: null,
+                points: 10
+            };
+
+            // Save to Firebase or local storage
+            if (database) {
+                const newTrashRef = database.ref('trash').push();
+                newTrashRef.set(trashData).then(() => {
+                    hideLoading();
+                    closeModal('addTrashModal');
+                    addTrashMarkerToMap(newTrashRef.key, trashData);
+                    updateUserStats('reported');
+                    addAlert('Trash spot reported successfully! +10 points', 'info');
+                }).catch((error) => {
+                    hideLoading();
+                    alert('Error saving data: ' + error.message);
+                });
+            } else {
+                // Local storage fallback
+                const trashId = 'trash_' + Date.now();
+                const existingTrash = JSON.parse(localStorage.getItem('trashData') || '{}');
+                existingTrash[trashId] = trashData;
+                localStorage.setItem('trashData', JSON.stringify(existingTrash));
+                
+                hideLoading();
+                closeModal('addTrashModal');
+                addTrashMarkerToMap(trashId, trashData);
+                updateUserStats('reported');
+                addAlert('Trash spot reported successfully! +10 points', 'info');
+            }
+            
+            // Clear form
+            document.getElementById('trashForm').reset();
+            window.tempTrashLocation = null;
+        }
+
+        // Add trash marker to map
+        function addTrashMarkerToMap(id, data) {
+            const icon = data.status === 'cleaned' ? '✅' : data.status === 'cleaning' ? '🧹' : '🗑️';
+            const color = data.status === 'cleaned' ? 'green' : data.status === 'cleaning' ? 'orange' : 'red';
+            
+            const marker = L.marker([data.lat, data.lng], {
+                icon: L.divIcon({
+                    html: `<div style="background: ${color}; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; border: 2px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">${icon}</div>`,
+                    className: 'custom-marker',
+                    iconSize: [30, 30]
+                })
+            }).addTo(map);
+            
+            // Create popup content
+            let popupContent = `
+                <div class="marker-popup">
+                    ${data.image ? `<img src="${data.image}" class="popup-image" alt="Trash photo">` : ''}
+                    <div class="popup-description">${data.description}</div>
+                    <div style="color: #666; font-size: 0.8rem; margin-bottom: 1rem;">
+                        Reported: ${new Date(data.timestamp).toLocaleDateString()}
+                    </div>
+            `;
+            
+            if (data.status === 'reported') {
+                popupContent += `<button class="popup-btn" onclick="startCleaning('${id}')">Start Cleaning</button>`;
+            } else if (data.status === 'cleaning') {
+                popupContent += `
+                    <div style="color: orange; font-weight: bold; margin-bottom: 0.5rem;">🧹 Cleaning in progress...</div>
+                    <button class="popup-btn cleaning" onclick="completeCleaning('${id}')">Upload Cleaned Photo</button>
+                `;
+            } else if (data.status === 'cleaned') {
+                popupContent += `
+                    <div style="color: green; font-weight: bold; margin-bottom: 0.5rem;">✅ Cleaned!</div>
+                    ${data.cleanedImage ? `<img src="${data.cleanedImage}" class="popup-image" alt="Cleaned photo">` : ''}
+                    <div style="color: #666; font-size: 0.8rem;">
+                        Cleaned by: ${data.cleanedBy || 'Anonymous'}<br>
+                        Points earned: ${data.points}
+                    </div>
+                `;
+            }
+            
+            popupContent += '</div>';
+            marker.bindPopup(popupContent);
+            
+            trashMarkers.push({ id, marker, data });
+        }
+
+        // Start cleaning process
+        function startCleaning(trashId) {
+            if (database) {
+                database.ref(`trash/${trashId}`).update({
+                    status: 'cleaning',
+                    cleaningStarted: Date.now(),
+                    cleaningBy: getUserId()
+                }).then(() => {
+                    loadTrashData();
+                    addAlert('Cleaning started! Take a photo when finished.', 'info');
+                });
+            } else {
+                const existingTrash = JSON.parse(localStorage.getItem('trashData') || '{}');
+                if (existingTrash[trashId]) {
+                    existingTrash[trashId].status = 'cleaning';
+                    existingTrash[trashId].cleaningStarted = Date.now();
+                    existingTrash[trashId].cleaningBy = getUserId();
+                    localStorage.setItem('trashData', JSON.stringify(existingTrash));
+                    loadTrashData();
+                    addAlert('Cleaning started! Take a photo when finished.', 'info');
+                }
+            }
+        }
+
+        // Complete cleaning process
+        function completeCleaning(trashId) {
+            window.currentCleaningId = trashId;
+            openModal('cleaningModal');
+        }
+
+        // Handle cleaning form submission
+        document.getElementById('cleaningForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const photoFile = document.getElementById('cleaningPhoto').files[0];
+            
+            if (!photoFile) {
+                alert('Please take a photo of the cleaned area.');
+                return;
+            }
+            
+            showLoading();
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const base64Image = e.target.result;
+                finalizeCleaning(window.currentCleaningId, base64Image);
+            };
+            reader.readAsDataURL(photoFile);
+        });
+
+        // Finalize cleaning
+        function finalizeCleaning(trashId, cleanedImage) {
+            const updateData = {
+                status: 'cleaned',
+                cleanedImage: cleanedImage,
+                cleanedBy: getUserId(),
+                cleanedAt: Date.now()
+            };
+
+            if (database) {
+                database.ref(`trash/${trashId}`).update(updateData).then(() => {
+                    hideLoading();
+                    closeModal('cleaningModal');
+                    loadTrashData();
+                    updateUserStats('cleaned');
+                    addAlert('Great job! Cleaning completed! +20 points', 'info');
+                });
+            } else {
+                const existingTrash = JSON.parse(localStorage.getItem('trashData') || '{}');
+                if (existingTrash[trashId]) {
+                    Object.assign(existingTrash[trashId], updateData);
+                    localStorage.setItem('trashData', JSON.stringify(existingTrash));
+                    hideLoading();
+                    closeModal('cleaningModal');
+                    loadTrashData();
+                    updateUserStats('cleaned');
+                    addAlert('Great job! Cleaning completed! +20 points', 'info');
+                }
+            }
+            
+            document.getElementById('cleaningForm').reset();
+            window.currentCleaningId = null;
+        }
+
+        // Load trash data from database
+        function loadTrashData() {
+            // Clear existing markers
+            trashMarkers.forEach(item => {
+                map.removeLayer(item.marker);
+            });
+            trashMarkers = [];
+            
+            if (database) {
+                database.ref('trash').on('value', (snapshot) => {
+                    const data = snapshot.val();
+                    if (data) {
+                        Object.keys(data).forEach(key => {
+                            addTrashMarkerToMap(key, data[key]);
+                        });
+                    }
+                });
+            } else {
+                // Load from local storage
+                const existingTrash = JSON.parse(localStorage.getItem('trashData') || '{}');
+                Object.keys(existingTrash).forEach(key => {
+                    addTrashMarkerToMap(key, existingTrash[key]);
+                });
+            }
+        }
+
+        // Check for nearby trash
+        function checkNearbyTrash() {
+            if (!userLocation) return;
+            
+            let nearbyCount = 0;
+            trashMarkers.forEach(item => {
+                const distance = calculateDistance(
+                    userLocation.lat, userLocation.lng,
+                    item.data.lat, item.data.lng
+                );
+                
+                if (distance <= 0.05 && item.data.status === 'reported') { // 50 meters
+                    nearbyCount++;
+                }
+            });
+            
+            document.getElementById('nearbyTrash').textContent = nearbyCount;
+            
+            if (nearbyCount > 0) {
+                addAlert(`${nearbyCount} trash spot(s) found within 50m of your location!`, 'warning');
+            }
+        }
+
+        // Calculate distance between two points (in km)
+        function calculateDistance(lat1, lng1, lat2, lng2) {
+            const R = 6371; // Earth's radius in km
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLng = (lng2 - lng1) * Math.PI / 180;
+            const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                      Math.sin(dLng/2) * Math.sin(dLng/2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            return R * c;
+        }
+
+        // Update user statistics
+        function updateUserStats(action) {
+            if (action === 'reported') {
+                userStats.totalReports++;
+                userStats.totalPoints += 10;
+            } else if (action === 'cleaned') {
+                userStats.totalCleaned++;
+                userStats.totalPoints += 20;
+            }
+            
+            localStorage.setItem('userStats', JSON.stringify(userStats));
+            updateStats();
+        }
+
+        // Update stats display
+        function updateStats() {
+            const savedStats = JSON.parse(localStorage.getItem('userStats') || '{}');
+            userStats = { ...userStats, ...savedStats };
+            
+            document.getElementById('totalPoints').textContent = userStats.totalPoints || 0;
+            document.getElementById('totalReports').textContent = userStats.totalReports || 0;
+            document.getElementById('totalCleaned').textContent = userStats.totalCleaned || 0;
+        }
+
+        // Load leaderboard
+        function loadLeaderboard() {
+            const leaderboardList = document.getElementById('leaderboardList');
+            
+            // Mock leaderboard data (in real app, this would come from Firebase)
+            const mockLeaderboard = [
+                { username: 'EcoWarrior123', points: 450, reports: 25, cleaned: 18 },
+                { username: 'GreenHero', points: 380, reports: 22, cleaned: 14 },
+                { username: 'CleanCity', points: 320, reports: 18, cleaned: 12 },
+                { username: 'TrashHunter', points: 290, reports: 16, cleaned: 11 },
+                { username: 'EcoFriend', points: 250, reports: 15, cleaned: 8 }
+            ];
+            
+            // Add current user to leaderboard
+            mockLeaderboard.push({
+                username: 'You',
+                points: userStats.totalPoints || 0,
+                reports: userStats.totalReports || 0,
+                cleaned: userStats.totalCleaned || 0
+            });
+            
+            // Sort by points
+            mockLeaderboard.sort((a, b) => b.points - a.points);
+            
+            leaderboardList.innerHTML = '';
+            mockLeaderboard.forEach((user, index) => {
+                const isCurrentUser = user.username === 'You';
+                const item = document.createElement('div');
+                item.className = 'leaderboard-item';
+                if (isCurrentUser) {
+                    item.style.background = 'rgba(16, 185, 129, 0.1)';
+                    item.style.border = '2px solid #10b981';
+                }
+                
+                item.innerHTML = `
+                    <div class="rank">#${index + 1}</div>
+                    <div class="user-info">
+                        <div class="username">${user.username}${isCurrentUser ? ' 🎯' : ''}</div>
+                        <div class="points">${user.reports} reports • ${user.cleaned} cleaned</div>
+                    </div>
+                    <div class="score">${user.points}</div>
+                `;
+                
+                leaderboardList.appendChild(item);
+            });
+        }
+
+        // Add alert
+        function addAlert(message, type = 'info') {
+            const alertsList = document.getElementById('alertsList');
+            const alert = document.createElement('div');
+            alert.className = `alert-item ${type}`;
+            
+            const icon = type === 'error' ? '❌' : type === 'warning' ? '⚠️' : 'ℹ️';
+            
+            alert.innerHTML = `
+                <div class="alert-title">${icon} ${message}</div>
+                <div class="alert-time">${new Date().toLocaleTimeString()}</div>
+            `;
+            
+            alertsList.insertBefore(alert, alertsList.firstChild);
+            
+            // Remove old alerts (keep only last 10)
+            while (alertsList.children.length > 10) {
+                alertsList.removeChild(alertsList.lastChild);
+            }
+        }
+
+        // Modal functions
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        // Loading functions
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+        }
+
+        // Get user ID (simple implementation)
+        function getUserId() {
+            let userId = localStorage.getItem('userId');
+            if (!userId) {
+                userId = 'user_' + Date.now();
+                localStorage.setItem('userId', userId);
+            }
+            return userId;
+        }
+
+        // Register service worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('data:application/javascript;base64,c2VsZi5hZGRFdmVudExpc3RlbmVyKCdpbnN0YWxsJywgZnVuY3Rpb24oZXZlbnQpIHsKICBzZWxmLnNraXBXYWl0aW5nKCk7Cn0pOwoKc2VsZi5hZGRFdmVudExpc3RlbmVyKCdhY3RpdmF0ZScsIGZ1bmN0aW9uKGV2ZW50KSB7CiAgc2VsZi5jbGllbnRzLmNsYWltKCk7Cn0pOwoKc2VsZi5hZGRFdmVudExpc3RlbmVyKCdmZXRjaCcsIGZ1bmN0aW9uKGV2ZW50KSB7CiAgZXZlbnQucmVzcG9uZFdpdGgoZmV0Y2goZXZlbnQucmVxdWVzdCkpOwp9KTs=')
+                .then(function(registration) {
+                    console.log('SW registered: ', registration);
+                }).catch(function(registrationError) {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+
+        // Close modals when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target.classList.contains('modal')) {
+                e.target.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
